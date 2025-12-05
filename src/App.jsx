@@ -5,7 +5,6 @@ import ItemListContainer from './containers/ItemListContainer'
 import ItemDetailContainer from './containers/ItemDetailContainer'
 import './App.css'
 
-
 function NotFound() {
     return (
         <div style={{ padding: 40 }}>
@@ -14,7 +13,6 @@ function NotFound() {
         </div>
     )
 }
-
 
 export default function App() {
     return (
@@ -28,6 +26,10 @@ export default function App() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
+            
+            <footer className="footer">
+                <p>© 2024 TecnoStore. Todos los derechos reservados.</p>
+            </footer>
         </div>
     )
 }

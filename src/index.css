@@ -367,3 +367,14 @@ main {
     padding: 30px;
     background-color: #ffffff;
 }
+.footer {
+    background-color: #212529;
+    color: #6c757d;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+}
