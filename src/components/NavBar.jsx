@@ -1,23 +1,44 @@
-import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
-import "../App.css";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import CartWidget from './CartWidget'
 
-function Navbar() {
+const categories = [
+    { id: null, label: 'Todos' },
+    { id: 'audio', label: 'Audio' },
+    { id: 'perifericos', label: 'Periféricos' },
+    { id: 'pantallas', label: 'Pantallas' }
+]
+
+export default function NavBar() {
     return (
-        <header className="header">
-            <div className="logo">TecnoStore</div>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div className="container-fluid">
+                <NavLink className="navbar-brand fw-bold fs-4" to="/">
+                    TecnoStore
+                </NavLink>
 
-            <nav className="nav-center">
-                <a href="#">Inicio</a>
-                <a href="#">Productos</a>
-                <a href="#">Contacto</a>
-            </nav>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-            <div className="cart">
-                <FaShoppingCart />
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav me-auto">
+                        {categories.map(cat => (
+                            <li key={String(cat.id)} className="nav-item">
+                                <NavLink
+                                    to={cat.id ? `/category/${cat.id}` : '/'}
+                                    className={({ isActive }) =>
+                                        `nav-link ${isActive ? 'active fw-bold' : ''}`
+                                    }
+                                >
+                                    {cat.label}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                    <CartWidget />
+                </div>
             </div>
-        </header>
-    );
+        </nav>
+    )
 }
-
-export default Navbar;
