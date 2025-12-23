@@ -9,7 +9,6 @@ export async function fetchProducts(categoryId = null) {
         if (categoryId) {
             productsQuery = query(productsCollection, where('category', '==', categoryId));
         } else {
-            // Obtener todos
             productsQuery = productsCollection;
         }
 
@@ -29,8 +28,6 @@ export async function fetchProducts(categoryId = null) {
         throw error;
     }
 }
-
-// Obtener un producto por ID
 export async function fetchProductById(id) {
     try {
         const productDoc = doc(db, 'products', id);
