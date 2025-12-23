@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { fetchProductById } from '../data/products'
+import { fetchProductById } from '../services/productService'
 import ItemDetail from '../components/ItemDetail'
 
 

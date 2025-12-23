@@ -26,7 +26,6 @@ export default function App() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
-            
             <footer className="footer">
                 <p>© 2024 TecnoStore. Todos los derechos reservados.</p>
             </footer>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { fetchProducts } from '../data/products'
+import { fetchProducts } from '../services/productService'
 import ItemList from '../components/ItemList'
+
 
 
 export default function ItemListContainer() {
