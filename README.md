@@ -34,8 +34,10 @@ my-react-app/
 │   ├── containers/
 │   │   ├── ItemDetailContainer.jsx  # Contenedor del detalle
 │   │   └── ItemListContainer.jsx    # Contenedor del listado
-│   ├── data/
-│   │   └── products.js          # Base de datos simulada
+│   ├── services/
+│   │   └── productService.js    # Contiene las funciones que iteractuan con la base de datos
+│   ├──firebase/                 # Permisos de base de datos (Firebase)
+│   │   └──config.js   
 │   ├── index.css                # Estilos principales  
 │   ├── App.jsx                  # Componente principal
 │   ├── App.css                  # Estilos personalizados
@@ -121,6 +123,7 @@ CSS personalizado para efectos hover y animaciones
 Diseño mobile-first totalmente responsivo
 Cards con sombras y efectos de elevación
 Badges para mostrar stock y estado
+Firebase para base de datos 
 
 
 👨‍💻 Autor
@@ -132,6 +135,7 @@ Este proyecto fue desarrollado como trabajo práctico para [React js / Coderhous
 Imágenes de productos de Pinterest
 Iconos de React Icons
 Framework Bootstrap
+Base de datos Firebase
 
 
 Nota: Este es un proyecto educativo. Los productos y precios son ficticios.

@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom'
 import { fetchProductById } from '../services/productService'
 import ItemDetail from '../components/ItemDetail'
 
-
 export default function ItemDetailContainer() {
     const { productId } = useParams()
+    console.log('Buscando producto con ID:', productId)
+    
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-
 
     useEffect(() => {
         setLoading(true)
@@ -20,10 +20,7 @@ export default function ItemDetailContainer() {
             .finally(() => setLoading(false))
     }, [productId])
 
-
     if (loading) return <p>Cargando detalle...</p>
     if (error) return <p>Error: {error}</p>
-
-
     return <ItemDetail product={product} />
 }

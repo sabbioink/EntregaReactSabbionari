@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Item({ product }) {
+    console.log('ID del producto:', product.id)
+    
     return (
         <div className="card h-100 shadow-sm hover-card">
             <img
