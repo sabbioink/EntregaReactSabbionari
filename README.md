@@ -37,7 +37,8 @@ my-react-app/
 │   ├── services/
 │   │   └── productService.js    # Contiene las funciones que iteractuan con la base de datos
 │   ├──firebase/                 # Permisos de base de datos (Firebase)
-│   │   └──config.js   
+│   │   └──config.js
+│   │   └──uploadProducts.js   
 │   ├── index.css                # Estilos principales  
 │   ├── App.jsx                  # Componente principal
 │   ├── App.css                  # Estilos personalizados

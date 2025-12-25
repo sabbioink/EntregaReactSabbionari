@@ -1,6 +1,5 @@
 import React from 'react'
 import Item from './Item'
-
 const ItemList = ({ items }) => {
     if (!items || items.length === 0) {
         return (
@@ -9,7 +8,6 @@ const ItemList = ({ items }) => {
             </div>
         )
     }
-
     return (
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {items.map((prod) => (
@@ -20,5 +18,4 @@ const ItemList = ({ items }) => {
         </div>
     )
 }
-
 export default ItemList

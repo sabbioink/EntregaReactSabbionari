@@ -3,14 +3,11 @@ import { useParams } from 'react-router-dom'
 import { fetchProducts } from '../services/productService'
 import ItemList from '../components/ItemList'
 
-
-
 export default function ItemListContainer() {
     const { categoryId } = useParams()
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-
 
     useEffect(() => {
         setLoading(true)
@@ -21,10 +18,8 @@ export default function ItemListContainer() {
             .finally(() => setLoading(false))
     }, [categoryId])
 
-
     if (loading) return <p>Cargando productos...</p>
     if (error) return <p>Error: {error}</p>
-
 
     return (
         <div>
