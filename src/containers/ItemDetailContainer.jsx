@@ -5,8 +5,6 @@ import ItemDetail from '../components/ItemDetail'
 
 export default function ItemDetailContainer() {
     const { productId } = useParams()
-    console.log('Buscando producto con ID:', productId)
-    
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -20,7 +18,16 @@ export default function ItemDetailContainer() {
             .finally(() => setLoading(false))
     }, [productId])
 
-    if (loading) return <p>Cargando detalle...</p>
+    if (loading) return (
+        <div className="container mt-5 text-center">
+            <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Cargando...</span>
+            </div>
+            <p className="mt-3">Cargando detalle del producto...</p>
+        </div>
+    )
+    
     if (error) return <p>Error: {error}</p>
+
     return <ItemDetail product={product} />
 }

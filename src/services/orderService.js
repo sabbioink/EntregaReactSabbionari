@@ -28,8 +28,6 @@ export async function createOrder(orderData) {
 
         const docRef = await addDoc(collection(db, 'orders'), order)
         
-        console.log('Orden creada con ID:', docRef.id)
-        
         return {
             success: true,
             orderId: docRef.id
